@@ -135,6 +135,9 @@ def logout():
 
 
 # define route for todolist page
+"""
+I kept the name "todolist" for the route, but it is not a todolist anymore. It is now a drinks catalog.
+"""
 @app.route('/todolist/', methods=('GET', 'POST'))
 def todolist():
     # Check if the user is logged in

@@ -17,7 +17,7 @@ todo_bp = Blueprint('todo_bp', __name__, template_folder='templates', static_fol
 @app.route('/todolist', methods=('GET', 'POST'))
 def todolist():
     """
-    Display the todo list and allow adding new items.
+    Display the list and allow adding new items.
     If the request method is POST, add a new item to the list.
     * content: The content of the new item.
     * degree: The degree of the new item.
