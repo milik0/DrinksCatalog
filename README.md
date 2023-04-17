@@ -1,5 +1,5 @@
 # DrinksCatalog
-DrinksCatalog is a web application built with Flask and MongoDB that allows users to manage a catalog of drinks. It provides a simple and intuitive interface to add, view, edit, and delete drinks from the catalog. This README file contains all the necessary information on how to install and use the application.
+DrinksCatalog is a web application built with Flask and MongoDB that allows bars to manage their drink catalog. It provides a simple and intuitive interface to add, view, edit, and delete drinks from the catalog. The application also includes an authentication system, which allows bars to create their own account and restrict access to certain features.
 
 ## Getting started
 Before running the application, you will need to make sure that you have Python 3.x installed on your computer, along with the Flask and pymongo packages. You will also need to have MongoDB installed and running on your computer.
@@ -23,7 +23,7 @@ This will start the Flask development server and make the application available 
 ## Using the application
 - The application provides a simple and intuitive interface to manage a catalog of drinks. When you first open the application, you will see a list of all the drinks in the catalog. You can click on a drink to view its details, or click on the "Add Drink" button to add a new drink.
 
-- To add a new drink, click on the "Add Drink" button and fill out the form with the details of the new drink. The form requires a name, a description, a price, and an optional image URL. Once you have filled out the form, click the "Add Drink" button to add the drink to the catalog.
+- To add a new drink, click on the "Add Drink" button and fill out the form with the details of the new drink. The form requires a name and a type (alcoholic or not). Once you have filled out the form, click the "Add Drink" button to add the drink to the catalog.
 
 - To edit an existing drink, click on the drink you want to edit and then click the "Edit" button. This will bring up a form with the current details of the drink. You can edit any of the fields and then click the "Save Changes" button to update the drink in the catalog.
 
