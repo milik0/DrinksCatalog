@@ -22,15 +22,15 @@ To run the application, open a terminal or command prompt and navigate to the di
 This will start the Flask development server and make the application available at http://localhost:5000.
 
 ## Using the application
-The application provides a simple and intuitive interface to manage a catalog of drinks. When you first open the application, you will see a list of all the drinks in the catalog. You can click on a drink to view its details, or click on the "Add Drink" button to add a new drink.
+- The application provides a simple and intuitive interface to manage a catalog of drinks. When you first open the application, you will see a list of all the drinks in the catalog. You can click on a drink to view its details, or click on the "Add Drink" button to add a new drink.
 
-To add a new drink, click on the "Add Drink" button and fill out the form with the details of the new drink. The form requires a name, a description, a price, and an optional image URL. Once you have filled out the form, click the "Add Drink" button to add the drink to the catalog.
+- To add a new drink, click on the "Add Drink" button and fill out the form with the details of the new drink. The form requires a name, a description, a price, and an optional image URL. Once you have filled out the form, click the "Add Drink" button to add the drink to the catalog.
 
-To edit an existing drink, click on the drink you want to edit and then click the "Edit" button. This will bring up a form with the current details of the drink. You can edit any of the fields and then click the "Save Changes" button to update the drink in the catalog.
+- To edit an existing drink, click on the drink you want to edit and then click the "Edit" button. This will bring up a form with the current details of the drink. You can edit any of the fields and then click the "Save Changes" button to update the drink in the catalog.
 
-To delete a drink, click on the drink you want to delete and then click the "Delete" button. This will remove the drink from the catalog.
+- To delete a drink, click on the drink you want to delete and then click the "Delete" button. This will remove the drink from the catalog.
 
-Authentication and authorization
+## Authentication and authorization
 The application provides basic authentication and authorization to restrict access to certain features. By default, the application comes with a single user account with administrator privileges. You can log in with this account by clicking on the "Log In" button in the top right corner of the application.
 
 To create additional user accounts, you can use the create_user.py script. This script will prompt you for a username and password, and then create a new user account with standard privileges. To create an administrator account, use the create_admin.py script instead.
