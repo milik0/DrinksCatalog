@@ -16,6 +16,13 @@ todo_bp = Blueprint('todo_bp', __name__, template_folder='templates', static_fol
 
 @app.route('/todolist', methods=('GET', 'POST'))
 def todolist():
+    """
+    Display the todo list and allow adding new items.
+    If the request method is POST, add a new item to the list.
+    * content: The content of the new item.
+    * degree: The degree of the new item.
+    :return: The todo list page.
+    """
     message = ''
     if "email" not in session:
         return redirect(url_for("login"))
@@ -32,6 +39,13 @@ def todolist():
 
 @app.post('/<id>/delete')
 def delete(id):
+    """
+    Delete an item from the list.
+
+    * id: The id of the item to delete.
+
+    :return: Redirect to the index page.
+    """
     todos.delete_one({"_id": ObjectId(id)})
     return redirect(url_for('index'))
     
