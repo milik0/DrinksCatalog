@@ -1,7 +1,83 @@
-# about html
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ 
+    <h1>About Drinks Catalog</h1>
 
-{% block content %}
-    <h1>{% block title %} About {% endblock %}</h1>
-    <h3>FlaskApp is a Flask web application written in Python.</h3>
-{% endblock %}
+    
+
+    <section class="section-selector-1 cols-2-half theme-light flex-row-reverse">
+
+        <div class="col-2 col-text">
+			
+            <h2>Our Mission</h2>
+            <p>Drinks Catalog is a web application built with Flask and MongoDB that allows bars to manage their catalog of drinks. It provides a simple and intuitive interface to add, view, edit, and delete drinks from the catalog.</p>
+
+            <p>The application features a user authentication system that allows bars to create an account and manage their own catalog of drinks. This makes it easy for bars to keep track of their inventory and update their drink offerings as needed.</p>
+        
+		</div>
+
+        <div class="col-2 col-visual">
+            <figure>
+                <img src="https://lunevedy.com/ui/assets/img/1024x618-cheesecake.jpg" alt="Placeholder image">
+            </figure>
+        </div>
+
+    </section>
+
+    
+
+    <section class="section-selector-1 cols-2-half theme-light">
+
+        <div class="col-2 col-text">
+			<h2>Our System</h2>
+
+            <p>The drink model used in the application is composed of a name and a type, which indicates whether the drink is alcoholic or not. This simple model allows bars to easily categorize and filter their drinks based on their needs.</p>
+    
+            <p>The application uses Flask as the web framework and MongoDB as the database. Flask provides a simple and flexible way to build web applications, while MongoDB provides a scalable and performant way to store and retrieve data.</p>
+        
+		</div>
+
+        <div class="col-2 col-visual">
+            <figure>
+                <img src="https://lunevedy.com/ui/assets/img/1024x618-cheesecake.jpg" alt="Placeholder image">
+            </figure>
+        </div>
+
+    </section>
+
+    <section class="section-selector-1 cols-2-half theme-light">
+
+        <div class="col-2 col-text">
+			
+            <h2>Contact Us</h2>
+
+            <p>If you have any questions or issues with the application, please feel free to contact us at drinks_catalog@bar.com. We hope you enjoy using Drinks Catalog!</p>
+        
+			
+			<div class="container-btn">
+				<a href="#" class="btn btn-solid">
+					<span>Start free trial</span><i class="fas fa-arrow-right"></i>
+				</a>
+			</div>
+		</div>
+
+        <div class="col-2 col-visual">
+            <figure>
+                <img src="https://lunevedy.com/ui/assets/img/1024x618-cheesecake.jpg" alt="Placeholder image">
+            </figure>
+        </div>
+
+    </section>
+
+</body>
+</html>
+
+
+
