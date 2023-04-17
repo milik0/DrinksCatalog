@@ -5,7 +5,7 @@ DrinksCatalog is a web application built with Flask and MongoDB that allows user
 Before running the application, you will need to make sure that you have Python 3.x installed on your computer, along with the Flask and pymongo packages. You will also need to have MongoDB installed and running on your computer.
 
 To install Flask and pymongo, open a terminal or command prompt and run:
-``pip install Flask pymongo``
+``{py} pip install Flask pymongo``
 
 To install MongoDB, follow the instructions on the MongoDB website.
 
