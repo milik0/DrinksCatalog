@@ -12,61 +12,61 @@
         display: none;
     }
 </style>
-    <h1>FlaskTODO</h1>
+    <h1>My Bar Catalog</h1>
     <h3>{{ utc_dt }}</h3>
     <hr>
     <div class="content">
     <form method="post">
         <p>
-            <b><label for="content">Todo content</label></b>
+            <b><label for="content">Drink Name</label></b>
         </p>
         <p>
             <input type="text" name="content"
-                placeholder="Todo Content"></input>
+                placeholder="Drink Name"></input>
         </p>
 
         <p>
-            <b><label for="degree">Degree</label></b>
+            <b><label for="degree">Type</label></b>
         </p>
         <p>
             <input id="degree-0" name="degree" required type="radio" value="Important">
-            <label for="degree-0">Important</label>
+            <label for="degree-0">Alcoholic</label>
         </p>
         <p>
             <input id="degree-1" name="degree" required type="radio" value="Unimportant">
-            <label for="degree-1">Unimportant</label>
+            <label for="degree-1">Non-Alcoholic</label>
         </p>
-        <button type="submit">Submit</button>
+        <button type="submit">Add Drink</button>
     </form>
-    <button id="important">Show only important</button>
+    <button id="important">Show only Alcoholic</button>
     <hr>
     {% for todo in todos %}
             <div class="todo {{ todo['degree'] }}">
                 <p>{{ todo['content'] }} <i>({{ todo['degree']}})</i></p>
                 <form method="POST" action="{{ url_for('delete', id=todo['_id']) }}" >
-                    <input type="submit" value="Delete Todo"
+                    <input type="submit" value="Delete Drink"
                            onclick="return confirm('Are you sure you want to delete this entry?')">
                 </form>
-                <button id="btn">Modify Todo</button>
+                <button id="btn">Modify Drink</button>
                 <form id="popup" method="POST" action = "{{ url_for('modify', id=todo['_id']) }}">
                     <p>
-                        <b><label for="content">Todo content</label></b>
+                        <b><label for="content">Drink Name</label></b>
                     </p>
                     <p>
                         <input type="text" name="content"
-                            placeholder="Todo Content"></input>
+                            placeholder="Drink Name"></input>
                     </p>
             
                     <p>
-                        <b><label for="degree">Degree</label></b>
+                        <b><label for="degree">Type</label></b>
                     </p>
                     <p>
                         <input id="degree-0" name="degree" required type="radio" value="Important">
-                        <label for="degree-0">Important</label>
+                        <label for="degree-0">Alcoholic</label>
                     </p>
                     <p>
                         <input id="degree-1" name="degree" required type="radio" value="Unimportant">
-                        <label for="degree-1">Unimportant</label>
+                        <label for="degree-1">Non-Alcoholic</label>
                     </p>
                     <button type="submit">Submit</button>
                 </form>
@@ -102,7 +102,7 @@
             }
             else
             {
-                important.textContent = 'Show only important';
+                important.textContent = 'Show only alcoholic';
                 showall = true;
                 const Unimportant = document.getElementsByClassName('Unimportant');
                 for (var i = 0; i<Unimportant.length;i++){
