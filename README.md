@@ -16,8 +16,7 @@ Once you have created the database and collection, you will need to update the c
 
 ## Running the application
 To run the application, open a terminal or command prompt and navigate to the directory containing the application files. Then run the following command:
-
-``python app.py``
+```python app.py```
 
 This will start the Flask development server and make the application available at http://localhost:5000.
 
