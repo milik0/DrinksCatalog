@@ -32,6 +32,9 @@ This will start the Flask development server and make the application available 
 - To edit an existing drink, click on the drink you want to edit and then click the "Edit" button. This will bring up a form with the current details of the drink. You can edit any of the fields and then click the "Save Changes" button to update the drink in the catalog.
 
 - To delete a drink, click on the drink you want to delete and then click the "Delete" button. This will remove the drink from the catalog.
+<p align="center">
+  <img src="img/crud.png" />
+</p>
 
 ## Authentication and authorization
 The application provides basic authentication and authorization to restrict access to certain features. By default, the application comes with a single user account with administrator privileges. You can log in with this account by clicking on the "Log In" button in the top right corner of the application.
