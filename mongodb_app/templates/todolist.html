@@ -1,0 +1,115 @@
+# todolist html
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    .todo {
+        padding: 20px;
+        margin: 10px;
+        background-color: #eee;
+    }
+    #popup{
+        display: none;
+    }
+</style>
+    <h1>FlaskTODO</h1>
+    <h3>{{ utc_dt }}</h3>
+    <hr>
+    <div class="content">
+    <form method="post">
+        <p>
+            <b><label for="content">Todo content</label></b>
+        </p>
+        <p>
+            <input type="text" name="content"
+                placeholder="Todo Content"></input>
+        </p>
+
+        <p>
+            <b><label for="degree">Degree</label></b>
+        </p>
+        <p>
+            <input id="degree-0" name="degree" required type="radio" value="Important">
+            <label for="degree-0">Important</label>
+        </p>
+        <p>
+            <input id="degree-1" name="degree" required type="radio" value="Unimportant">
+            <label for="degree-1">Unimportant</label>
+        </p>
+        <button type="submit">Submit</button>
+    </form>
+    <button id="important">Show only important</button>
+    <hr>
+    {% for todo in todos %}
+            <div class="todo {{ todo['degree'] }}">
+                <p>{{ todo['content'] }} <i>({{ todo['degree']}})</i></p>
+                <form method="POST" action="{{ url_for('delete', id=todo['_id']) }}" >
+                    <input type="submit" value="Delete Todo"
+                           onclick="return confirm('Are you sure you want to delete this entry?')">
+                </form>
+                <button id="btn">Modify Todo</button>
+                <form id="popup" method="POST" action = "{{ url_for('modify', id=todo['_id']) }}">
+                    <p>
+                        <b><label for="content">Todo content</label></b>
+                    </p>
+                    <p>
+                        <input type="text" name="content"
+                            placeholder="Todo Content"></input>
+                    </p>
+            
+                    <p>
+                        <b><label for="degree">Degree</label></b>
+                    </p>
+                    <p>
+                        <input id="degree-0" name="degree" required type="radio" value="Important">
+                        <label for="degree-0">Important</label>
+                    </p>
+                    <p>
+                        <input id="degree-1" name="degree" required type="radio" value="Unimportant">
+                        <label for="degree-1">Unimportant</label>
+                    </p>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        {% endfor %}
+
+
+    </div>
+    <script type="text/javascript">
+        const btn = document.getElementById('btn');
+        const important = document.getElementById('important');
+        btn.addEventListener('click', () => {
+            const form = document.getElementById('popup');
+
+            if (form.style.display != 'block') {
+                form.style.display = 'block';
+                btn.textContent = 'Hide';
+            } else {
+                form.style.display = 'none';
+                btn.textContent = 'Modify Todo';
+            }
+        });
+        important.addEventListener('click', ()=>
+        {
+            if (important.textContent != 'Show all')
+            {
+                important.textContent = 'Show all';
+                showall = false;
+                const Unimportant = document.getElementsByClassName('Unimportant');
+                for (var i = 0; i<Unimportant.length;i++){
+                    Unimportant.item(i).style.display = 'none';
+                }
+            }
+            else
+            {
+                important.textContent = 'Show only important';
+                showall = true;
+                const Unimportant = document.getElementsByClassName('Unimportant');
+                for (var i = 0; i<Unimportant.length;i++){
+                    Unimportant.item(i).style.display = 'block';
+                }
+                
+            }
+        });
+    </script>
+{% endblock %}
