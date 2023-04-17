@@ -23,6 +23,9 @@ This will start the Flask development server and make the application available 
 
 ## Using the application
 - The application provides a simple and intuitive interface to manage a catalog of drinks. When you first open the application, you will see a list of all the drinks in the catalog. You can click on a drink to view its details, or click on the "Add Drink" button to add a new drink.
+<p align="center">
+  <img src="img/about.png" />
+</p>
 ![Alt text](./img/about.png "About-us")
 
 - To add a new drink, click on the "Add Drink" button and fill out the form with the details of the new drink. The form requires a name and a type (alcoholic or not). Once you have filled out the form, click the "Add Drink" button to add the drink to the catalog.
