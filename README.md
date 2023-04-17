@@ -39,9 +39,7 @@ This will start the Flask development server and make the application available 
 ## Authentication and authorization
 The application provides basic authentication and authorization to restrict access to certain features. By default, the application comes with a single user account with administrator privileges. You can log in with this account by clicking on the "Log In" button in the top right corner of the application.
 
-To create additional user accounts, you can use the create_user.py script. This script will prompt you for a username and password, and then create a new user account with standard privileges. To create an administrator account, use the create_admin.py script instead.
-
-To restrict access to certain features, the application uses Flask-Login to check the user's authentication status and Flask-Principal to check the user's authorization status. Only authenticated users can add, edit, or delete drinks, and only administrators can edit or delete drinks.
+To create additional user accounts, you can go on the register page and create a new account.
 
 
 
