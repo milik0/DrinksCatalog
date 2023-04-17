@@ -1,5 +1,6 @@
 # DrinksCatalog
 DrinksCatalog is a web application built with Flask and MongoDB that allows bars to manage their drink catalog. It provides a simple and intuitive interface to add, view, edit, and delete drinks from the catalog. The application also includes an authentication system, which allows bars to create their own account and restrict access to certain features.
+![Alt text](./img/home.png "Home")
 
 ## Getting started
 Before running the application, you will need to make sure that you have Python 3.x installed on your computer, along with the Flask and pymongo packages. You will also need to have MongoDB installed and running on your computer.
@@ -22,6 +23,7 @@ This will start the Flask development server and make the application available 
 
 ## Using the application
 - The application provides a simple and intuitive interface to manage a catalog of drinks. When you first open the application, you will see a list of all the drinks in the catalog. You can click on a drink to view its details, or click on the "Add Drink" button to add a new drink.
+![Alt text](./img/about.png "About-us")
 
 - To add a new drink, click on the "Add Drink" button and fill out the form with the details of the new drink. The form requires a name and a type (alcoholic or not). Once you have filled out the form, click the "Add Drink" button to add the drink to the catalog.
 
